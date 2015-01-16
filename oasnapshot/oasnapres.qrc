@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/images/arrow.png</file>
+        <file>res/images/brush.png</file>
+        <file>res/images/capture.ico</file>
+        <file>res/images/circle.png</file>
+        <file>res/images/color.png</file>
+        <file>res/images/cursor_colorful_arrow.png</file>
+        <file>res/images/cursor_crosshair.png</file>
+        <file>res/images/exit.png</file>
+        <file>res/images/FilterbarBkg.png</file>
+        <file>res/images/finish.png</file>
+        <file>res/images/LargeMagnifier.png</file>
+        <file>res/images/Magnifier.png</file>
+        <file>res/images/rectangle.png</file>
+        <file>res/images/save.png</file>
+        <file>res/images/select.png</file>
+        <file>res/images/SinglePoint.PNG</file>
+        <file>res/images/SinglePoint_1.png</file>
+        <file>res/images/SinglePoint_2.png</file>
+        <file>res/images/SinglePoint_3.png</file>
+        <file>res/images/text.png</file>
+        <file>res/images/ToolbarBkg.png</file>
+        <file>res/images/undo.png</file>
+    </qresource>
+</RCC>

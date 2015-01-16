@@ -1,0 +1,12 @@
+#ifndef OASNAPSHOT_GLOBAL_H
+#define OASNAPSHOT_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(OASNAPSHOT_LIBRARY)
+#  define OASNAPSHOTSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define OASNAPSHOTSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // OASNAPSHOT_GLOBAL_H
