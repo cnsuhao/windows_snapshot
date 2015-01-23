@@ -773,12 +773,10 @@ QByteArray FormStikyNote::getGeometryFromStream()
     QByteArray byte;
     QFile file_load(m_saveFilename);
     if(file_load.open(QIODevice::ReadOnly)){
-        QString str;
-        QByteArray bytetmp;
         QDataStream in(&file_load);
         in.setVersion(QDataStream::Qt_5_3);
-        in  >>  str;
-        in  >>  bytetmp;
+        in  >>  QString();
+        in  >>  QByteArray();
         in  >>  byte;
         file_load.close();
     }
