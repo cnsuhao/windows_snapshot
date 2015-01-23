@@ -6,7 +6,8 @@
 namespace Ui {
 class Widget;
 }
-
+class OAStikynoteInterface;
+class OASnapshotInterface;
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -15,6 +16,8 @@ public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
 
+    OAStikynoteInterface *oastikynote;
+    OASnapshotInterface *oasnapshotInterface;
 protected:
     void changeEvent(QEvent *e);
 
