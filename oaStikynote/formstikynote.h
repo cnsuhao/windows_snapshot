@@ -146,5 +146,12 @@ private:
     QList<QAction*> m_ExtendAction;
     QList<QMenu*> m_ExtendMenu;
 };
-
+inline QDataStream &operator>>(QDataStream &in, QString &str)
+{
+    return in>>(str);
+}
+inline QDataStream &operator>>(QDataStream &in, QByteArray &bytearray)
+{
+    return in>>bytearray;
+}
 #endif // FORMSTIKYNOTE_H

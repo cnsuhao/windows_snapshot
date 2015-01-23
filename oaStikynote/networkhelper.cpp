@@ -186,9 +186,6 @@ OANetworkReply::OANetworkReply(QNetworkReply *reply, QObject *parent):QObject(pa
     connect(reply,&QNetworkReply::uploadProgress,[=](qint64 bytesSent, qint64 bytesTotal){
         emit uploadProgress(bytesSent,bytesTotal);
     });
-    connect(reply,&QNetworkReply::encrypted,[=](){
-        emit encrypted();
-    });
     connect(reply,&QNetworkReply::metaDataChanged,[=](){
         emit metaDataChanged();
     });
@@ -196,9 +193,14 @@ OANetworkReply::OANetworkReply(QNetworkReply *reply, QObject *parent):QObject(pa
             [=](QNetworkReply::NetworkError code){
         emit onError(tr("Error code : %1").arg((int)code));
     });
+#ifndef QT_NO_SSL
     connect(reply,&QNetworkReply::sslErrors,[=](const QList<QSslError> & errors){
         emit sslErrors(errors);
     });
+    connect(reply,&QNetworkReply::encrypted,[=](){
+        emit encrypted();
+    });
+#endif
 }
 
 void OANetworkReply::setIsDebug(bool isDebug)
